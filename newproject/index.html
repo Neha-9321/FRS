@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light nav-bg ">
+        <a class="navbar-brand portfolio-logo " href="#" id="index_name">FashionBlend
+        </a>
+        <button class="navbar-toggler icon-color" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-link active text-white" href="home.html">
+                    Home   
+                    <span class="sr-only">(current)</span>
+                </a>
+                <a class="nav-link text-white" href="index.html">Products</a>
+                <a class="nav-link text-white" href="cart.html">Cart</a>
+                <a class="nav-link text-white" href="#">Log In</a>
+                
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>All Products</h1>
+        </header>
+
+        <div class="content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <input type="text" placeholder="Search categories..." id="category-search">
+                    <button type="submit">Search</button>
+                </div>
+
+                <div class="filter">
+                    <h3>Category</h3>
+                    <ul>
+                        <li><a href="#">All Clothing</a></li>
+                        <li><a href="#">Dresses</a></li>
+                        <li><a href="#">Tops</a></li>
+                        <li><a href="#">Jeans</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Main product section -->
+            <section class="products">
+                
+                <div class="product-card">
+                    <img src="dress1.jpg" alt="Blue Dress">
+                    <h2>Blue Dress</h2>
+                    <p>by Zara</p>
+                    <p class="price">Rs 4,999/-</p>
+                </div>
+                <div class="product-card">
+                    <img src="dress3.jpg" alt="Short Yellow Dress">
+                    <h2>Short Yellow Dress</h2>
+                    <p>by H&M</p>
+                    <p class="price">Rs 2,499/-</p>
+                </div>
+                <div class="product-card">
+                    <img src="dress2.jpg" alt="Casual Wear">
+                    <h2>Casual Wear</h2>
+                    <p>by Forever 21</p>
+                    <p class="price">Rs 1,799/-</p>
+                </div>
+                <div class="product-card">
+                    <img src="dress5.jpg" alt="Green Gown">
+                    <h2>Green Gown</h2>
+                    <p>by Manyavar</p>
+                    <p class="price">Rs 6,299/-</p>
+                </div>
+
+                <!-- Tops Section -->
+                <div class="product-card">
+                    <img src="top1.jpg" alt="White Top">
+                    <h2>White Top</h2>
+                    <p>by Mango</p>
+                    <p class="price">Rs 1,299/-</p>
+                </div>
+                <div class="product-card">
+                    <img src="top2.jpg" alt="Red Short Top">
+                    <h2>Red Short Top</h2>
+                    <p>by Vero Moda</p>
+                    <p class="price">Rs 1,599/-</p>
+                </div>
+                <div class="product-card">
+                    <img src="top3.jpg" alt="Printed White Top">
+                    <h2>Printed White Top</h2>
+                    <p>by Only</p>
+                    <p class="price">Rs 1,399/-</p>
+                </div>
+                <div class="product-card">
+                    <img src="top4.jpg" alt="Red Off-Shoulder Top">
+                    <h2>Red Off-Shoulder Top</h2>
+                    <p>by Dorothy Perkins</p>
+                    <p class="price">Rs 1,799/-</p>
+                </div>
+
+                <!-- Jeans Section -->
+                <div class="product-card">
+                    <img src="jeans1.jpg" alt="Multicolor Jeans">
+                    <h2> Ripped Jeans</h2>
+                    <p>by Levis</p>
+                    <p class="price">Rs 2,499/-</p>
+                </div>
+                <div class="product-card">
+                    <img src="jeans2.jpg" alt="Black Skinny Jeans">
+                    <h2> Blue Denim Jeans</h2>
+                    <p>by Wrangler</p>
+                    <p class="price">Rs 2,999/-</p>
+                </div>
+                <div class="product-card">
+                    <img src="jeans3.jpg" alt="Blue Denim Jeans">
+                    <h2>Black Baggy Jeans</h2>
+                    <p>by Pepe Jeans</p>
+                    <p class="price">Rs 2,799/-</p>
+                </div>
+                <div class="product-card">
+                    <img src="jeans4.jpg" alt="Ripped Jeans">
+                    <h2>Multicolor Jeans</h2>
+                    <p>by Calvin Klein</p>
+                    <p class="price">Rs 3,299/-</p>
+                </div>
+
+                <!-- Accessories Section -->
+                <div class="product-card">
+                    <img src="Acc 1.jpg" alt="Earrings">
+                    <h2>Earrings</h2>
+                    <p>by Accessorize</p>
+                    <p class="price">Rs 499/-</p>
+                </div>
+                <div class="product-card">
+                    <img src="Bag 2.jpg" alt="Tote Bag">
+                    <h2>Tote Bag</h2>
+                    <p>by Caprese</p>
+                    <p class="price">Rs 2,199/-</p>
+                </div>
+                <div class="product-card">
+                    <img src="Acc 4.jpg" alt="Hair Clips">
+                    <h2>Hair Clips</h2>
+                    <p>by Claires</p>
+                    <p class="price">Rs 299/-</p>
+                </div>
+                <div class="product-card">
+                    <img src="Bag 4.jpg" alt="Small Bag">
+                    <h2>Mini Bag</h2>
+                    <p>by Baggit</p>
+                    <p class="price">Rs 1,499/-</p>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
