@@ -148,3 +148,61 @@ header h1 {
   color: #007BFF;
   font-weight: bold;
 }
+
+/* Add these media queries at the end of your index.css file */
+
+@media screen and (max-width: 1200px) {
+  .product-card {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .sidebar {
+    width: 30%;
+  }
+  
+  .products {
+    margin-left: 32.5%;
+    width: 67.5%;
+  }
+  
+  header {
+    margin-left: 32%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    position: static;
+    height: auto;
+  }
+  
+  .products {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  header {
+    margin-left: 0;
+  }
+  
+  .product-card {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    width: 95%;
+  }
+  
+  .search-bar input {
+    width: 70%;
+  }
+  
+  .search-bar button {
+    width: 30%;
+  }
+}

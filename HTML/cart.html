@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="../CSS/cart.css" />
     <title>FashionBlend</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -11,9 +11,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="home_bg ">
+    <div class="cart_bg ">
         <nav class="navbar navbar-expand-lg navbar-light nav-bg ">
-            <a class="navbar-brand portfolio-logo " href="#" id="home_name">FashionBlend
+            <a class="navbar-brand portfolio-logo " href="#" id="cart_name">FashionBlend
             </a>
             <button class="navbar-toggler icon-color" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon "></span>
@@ -21,12 +21,12 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto">
                     <a class="nav-link active text-white" href="home.html">
-                        Home   
+                        Home
                         <span class="sr-only">(current)</span>
                     </a>
                     <a class="nav-link text-white" href="index.html">Products</a>
                     <a class="nav-link text-white" href="cart.html">Cart</a>
-                    <a class="nav-link text-white" href="#">Log In</a>
+                    <a class="nav-link text-white" href="login.html">Log In</a>
                     
                 </div>
             </div>
@@ -34,15 +34,16 @@
 
         <div class="container">
             <div class="row text-center">
-                <div class="col-12 col-lg-6 home_dash">
+                <div class="col-12 cart_dash"></div>
                    
-                    <h3 class="home_textcolor">Discover your perfect look! Upload your photo and instantly try on trending styles, personalized just for you.</h3>           
-                    <a href="index.html"><button class="home_btn">Shop Now</button></a>
+                    <img src="../Images/cart img1.jpg" class="cart_img1"/>
                 </div>
-                <div class="col-12 col-lg-6 dash">
+                <div class="col-12 dash">
                    
-                    <img src="img1.jpg" class="home_img1"/>
+                    <h3 class="cart_textcolor">Your Cart Is Empty</h3>           
+                    <button class="cart_btn">Shop Now</button>
                 </div>
+                
             </div>
         </div>
     </div>
