@@ -3,14 +3,15 @@
 .icon-color {
     background-color: white;
 }
-
-.register-bg {
-    background-color: #f5f5f5;
-    height: 100vh;
-    width: 100vw;
-    background-size: cover;
-}
-
+  .register-bg {
+      background-image: url("");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      width: 100%;
+      overflow-x: hidden;
+  }
 .nav-bg {
     background-color: #007BFF;
 }
@@ -24,7 +25,7 @@
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 50px;
+    margin-top: 150px;
 }
 
 .register-form h2 {
