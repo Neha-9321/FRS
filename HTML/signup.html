@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/login.css" />
+    <title>FashionBlend - Sign Up</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="login-bg">
+        <nav class="navbar navbar-expand-lg navbar-light nav-bg">
+            <a class="navbar-brand portfolio-logo" href="#" id="login-name">FashionBlend</a>
+            <button class="navbar-toggler icon-color" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-link text-white" href="home.html">Home</a>
+                    <a class="nav-link text-white" href="index.html">Products</a>
+                    <a class="nav-link text-white" href="cart.html">Cart</a>
+                    <a class="nav-link active text-white" href="signup.html">Login<span class="sr-only">(current)</span></a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 login-form">
+                    <h2 class="text-center mb-4">Sign Up for FashionBlend</h2>
+                    <form id="signupForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="username" placeholder="Username" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="password" placeholder="Password" required>
+                        </div>
+                        <button type="submit" id="signUp" name="signup_submit" class="btn btn-primary btn-block">Sign Up</button>
+                    </form>
+                    <p class="text-center mt-3">Already have an account? <a href="signin.html">Login here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+        import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-database.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCl5vQdFSADbgXsstQR55FWQt3I9cAtjL0",
+            authDomain: "frs1-ea85f.firebaseapp.com",
+            databaseURL: "https://frs1-ea85f-default-rtdb.firebaseio.com",
+            projectId: "frs1-ea85f",
+            storageBucket: "frs1-ea85f.appspot.com",
+            messagingSenderId: "99598799409",
+            appId: "1:99598799409:web:d9f3e42aa5d4b20b7e3b10"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        const auth = getAuth();
+
+        document.getElementById('signupForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            var username = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    const user = userCredential.user;
+                    set(ref(database, 'users/' + user.uid), {
+                        username: username,
+                        email: email
+                    });
+                    alert('Signed up successfully!');
+                    window.location.href = 'home.html';
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    alert(errorMessage);
+                });
+        });
+    </script>
+</body>
+</html>
